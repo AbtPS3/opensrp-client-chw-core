@@ -85,9 +85,6 @@ public abstract class CoreHivIndexContactFloatingMenu extends BaseIndexFloatingM
             callLayout.startAnimation(fabClose);
             callLayout.setClickable(false);
 
-            referLayout.startAnimation(fabClose);
-            referLayout.setClickable(false);
-
             isFabMenuOpen = false;
         } else {
             activityMain.setBackgroundResource(R.color.grey_tranparent_50);
