@@ -193,8 +193,7 @@ allprojects {
         maven {
 
             name = "GitHubPackages"
-
-            url = uri("https://maven.pkg.github.com/AbtPS3/opensrp-client-chw-gbv")
+            url = uri("https://maven.pkg.github.com/Digital-Square-Tanzania/opensrp-client-reporting")
             credentials {
                 username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
                 password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
@@ -385,7 +384,7 @@ dependencies {
 
     compileOnly 'com.ibm.fhir:fhir-model:4.7.0'
 
-    api('org.smartregister:opensrp-client-core:1.16.4-NACP-SNAPSHOT') {
+    api('org.smartregister:opensrp-client-core:1.16.5-NACP-SNAPSHOT') {
         exclude group: 'com.github.bmelnychuk', module: 'atv'
         exclude group: 'com.google.guava', module: 'guava'
         exclude group: 'com.android.support', module: 'appcompat-v7'
@@ -422,7 +421,7 @@ dependencies {
         exclude group: 'id.zelory', module: 'compressor'
     }
 
-    api('org.smartregister:opensrp-client-reporting:0.0.22-SNAPSHOT@aar') {
+    api('org.smartregister:opensrp-client-reporting:0.0.23-SNAPSHOT@aar') {
         transitive = true
         exclude group: 'org.smartregister', module: 'opensrp-client-core'
         exclude group: 'com.android.support', module: 'appcompat-v7'
@@ -569,6 +568,7 @@ dependencies {
         exclude group: 'id.zelory', module: 'compressor'
     }
 
+
     api('org.smartregister:opensrp-chw-sbc:1.0.0-SNAPSHOT@aar') {
         transitive = true
         exclude group: 'org.smartregister', module: 'opensrp-client-core'
@@ -578,7 +578,7 @@ dependencies {
         exclude group: 'id.zelory', module: 'compressor'
     }
 
-    api('org.smartregister:opensrp-chw-vmmc:1.0.0-SNAPSHOT@aar') {
+    api('org.smartregister:opensrp-chw-vmmc:1.0.1-SNAPSHOT@aar') {
         transitive = true
         exclude group: 'org.smartregister', module: 'opensrp-client-core'
         exclude group: 'org.smartregister', module: 'opensrp-client-native-form'
