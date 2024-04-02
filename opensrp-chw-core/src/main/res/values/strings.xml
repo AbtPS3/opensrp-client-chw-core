@@ -821,10 +821,16 @@
 
 
     <string name="iccm_enrollment">ICCM Services</string>
+
     <!--    VMMC-->
     <string name="vmmc_registration">VMMC Enrollment</string>
     <string name="vmmc_confirmation">Vmmc Confirmation</string>
     <string name="menu_vmmc">VMMC</string>
+
+
+    <!--    GBV/VAC-->
+    <string name="gbv_registration">GBV/VAC Registration</string>
+    <string name="vac_registration">VAC Registration</string>
 
 
 

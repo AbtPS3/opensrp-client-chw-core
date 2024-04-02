@@ -569,6 +569,12 @@ public class NavigationInteractor implements NavigationContract.Interactor {
                                 "   from " + org.smartregister.chw.sbc.util.Constants.TABLES.SBC_MONTHLY_SOCIAL_MEDIA_REPORT + " p " +
                                 "              where p.is_closed is 0 ";
                 return NavigationDao.getQueryCount(sqlMonthlyReportsSbc);
+            case org.smartregister.chw.gbv.util.Constants.TABLES.GBV_REGISTER:
+                String sqlGbv =
+                        "SELECT count(*) " +
+                                "   from " + org.smartregister.chw.gbv.util.Constants.TABLES.GBV_REGISTER + " p " +
+                                "              where p.is_closed is 0 ";
+                return NavigationDao.getQueryCount(sqlGbv);
             default:
                 return NavigationDao.getTableCount(tableName);
         }

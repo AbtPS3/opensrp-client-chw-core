@@ -74,6 +74,13 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/action_iccm_registration"
+        android:enabled="true"
+        android:title="@string/iccm_enrollment"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_remove_member"
         android:enabled="true"
         android:title="@string/remove_this_person"
@@ -91,6 +98,13 @@
         android:enabled="true"
         android:title="@string/pregnancy_confirmation"
         android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_gbv_registration"
+        android:enabled="true"
+        android:visible="false"
+        android:title="@string/vac_registration"
         app:showAsAction="never" />
 
 

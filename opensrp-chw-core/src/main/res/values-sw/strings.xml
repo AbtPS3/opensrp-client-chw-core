@@ -798,10 +798,12 @@
     <string name="vmmc_confirmation">Uhakiki wa VMMC</string>
     <string name="menu_vmmc">VMMC</string>
 
-
-
-
-
     <string name="iccm_enrollment">Huduma za ICCM</string>
+
+
+    <!--    GBV/VAC-->
+    <string name="gbv_registration">Usajili wa Ukatili wa kijisia na ukatili dhidi ya Watoto</string>
+    <string name="vac_registration">Usajili wa Ukatili dhidi ya Watoto</string>
+
 </resources>
 
