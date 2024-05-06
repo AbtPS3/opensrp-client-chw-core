@@ -961,6 +961,8 @@ public class CoreConstants {
 
         public static final String GBV = "GBV";
 
+        public static final String OVC = "OVC";
+
         public static final String SBC_MONTHLY_SOCIAL_MEDIA_REPORT = "SBC MONTHLY SOCIAL MEDIA REPORT";
     }
 
@@ -1224,6 +1226,8 @@ public class CoreConstants {
         public static final String SBC_MONTHLY_SOCIAL_MEDIA_REGISTER_ACTIVITY = "SBC_MONTHLY_SOCIAL_MEDIA_REPORT_REGISTER_ACTIVITY";
 
         public static final String GBV_REGISTER_ACTIVITY = "GBV_REGISTER_ACTIVITY";
+
+        public static final String OVC_REGISTER_ACTIVITY = "OVC_REGISTER_ACTIVITY";
     }
 
     public static final class BUSINESS_STATUS {
@@ -1280,6 +1284,8 @@ public class CoreConstants {
         public static final String VMMC = "VMMC";
 
         public static final String GBV = "GBV/VAC";
+
+        public static final String OVC = "OVC";
 
     }
 
