@@ -78,6 +78,7 @@ public class NavigationPresenter implements NavigationContract.Presenter {
         tableMap.put(CoreConstants.DrawerMenu.SBC, org.smartregister.chw.sbc.util.Constants.TABLES.SBC_REGISTER);
         tableMap.put(CoreConstants.DrawerMenu.SBC_MONTHLY_SOCIAL_MEDIA_REPORT, org.smartregister.chw.sbc.util.Constants.TABLES.SBC_MONTHLY_SOCIAL_MEDIA_REPORT);
         tableMap.put(CoreConstants.DrawerMenu.GBV, org.smartregister.chw.gbv.util.Constants.TABLES.GBV_REGISTER);
+        tableMap.put(CoreConstants.DrawerMenu.OVC, org.smartregister.chw.ovc.util.Constants.TABLES.OVC_REGISTER);
     }
 
     public HashMap<String, String> getTableMap() {
