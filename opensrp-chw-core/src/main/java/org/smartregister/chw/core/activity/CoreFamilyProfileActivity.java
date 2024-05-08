@@ -62,7 +62,7 @@ public abstract class CoreFamilyProfileActivity extends BaseFamilyProfileActivit
     protected String familyHead;
     protected String primaryCaregiver;
     protected String familyName;
-    private FamilyFloatingMenu familyFloatingMenu;
+    protected FamilyFloatingMenu familyFloatingMenu;
 
     @Override
     protected void setupViews() {
