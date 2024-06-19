@@ -829,8 +829,8 @@
 
 
     <!--    GBV/VAC-->
-    <string name="gbv_registration">GBV/VAC Registration</string>
-    <string name="vac_registration">VAC Registration</string>
+    <string name="gbv_registration">GBV/VAC Enrollment</string>
+    <string name="vac_registration">VAC Enrollment</string>
 
 
 
