@@ -100,5 +100,11 @@
         android:title="@string/vac_registration"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_ovc_registration"
+        android:enabled="true"
+        android:visible="false"
+        android:title="@string/ovc_enrollment"
+        app:showAsAction="never" />
 
 </menu>
