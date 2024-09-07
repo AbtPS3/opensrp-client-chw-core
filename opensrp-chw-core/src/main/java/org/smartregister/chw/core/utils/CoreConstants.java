@@ -1285,7 +1285,7 @@ public class CoreConstants {
 
         public static final String GBV = "GBV/VAC";
 
-        public static final String OVC = "OVC";
+        public static final String OVC = "MVC";
 
     }
 

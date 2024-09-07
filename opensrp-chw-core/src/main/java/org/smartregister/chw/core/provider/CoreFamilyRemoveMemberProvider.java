@@ -90,6 +90,8 @@ public abstract class CoreFamilyRemoveMemberProvider extends FamilyMemberRegiste
             this.instructions = view.findViewById(R.id.instructions);
             this.view = view;
 
+//            view.setVisibility(View.GONE);
+
             hint.setFontVariant(FontVariant.REGULAR);
         }
     }
