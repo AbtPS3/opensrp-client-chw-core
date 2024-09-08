@@ -33,6 +33,7 @@ import org.smartregister.chw.core.utils.ReportUtils;
 import org.smartregister.chw.core.utils.StockUsageReportUtils;
 import org.smartregister.chw.core.utils.Utils;
 import org.smartregister.chw.fp.util.FamilyPlanningConstants;
+import org.smartregister.chw.ge.dao.GeDao;
 import org.smartregister.chw.hivst.dao.HivstMobilizationDao;
 import org.smartregister.chw.malaria.util.Constants;
 import org.smartregister.chw.malaria.util.MalariaUtil;
@@ -334,6 +335,9 @@ public class CoreClientProcessor extends ClientProcessorForJava {
             case org.smartregister.chw.hivst.util.Constants.EVENT_TYPE.HIVST_MOBILIZATION:
                 processMobilizationEvent(eventClient.getEvent());
                 break;
+            case org.smartregister.chw.ge.util.Constants.EVENT_TYPE.GE_MOBILIZATION:
+                processGeMobilizationEvent(eventClient.getEvent());
+                break;
             case CoreConstants.EventType.ANC_PREGNANCY_CONFIRMATION:
             case CoreConstants.EventType.ANC_REGISTRATION:
             case CoreConstants.EventType.ANC_FOLLOWUP_CLIENT_REGISTRATION:
@@ -596,6 +600,38 @@ public class CoreClientProcessor extends ClientProcessorForJava {
                 }
             }
             HivstMobilizationDao.updateData(event.getBaseEntityId(), mobilizationDate, femaleClientsReached, maleClientsReached, maleCondomsIssued, femaleCondomsIssued);
+        }
+    }
+
+    private void processGeMobilizationEvent(Event event) {
+        List<Obs> mobilizationObs = event.getObs();
+        String eventStartDate = null;
+        String eventEndDate = null;
+        String eventType = null;
+        String eventSupporter = null;
+
+
+        if (!mobilizationObs.isEmpty()) {
+            for (Obs obs : mobilizationObs) {
+                if (org.smartregister.chw.ge.util.DBConstants.KEY.EVENT_START_DATE.equals(obs.getFormSubmissionField())) {
+                    eventStartDate = (String) obs.getValue();
+                } else if (org.smartregister.chw.ge.util.DBConstants.KEY.EVENT_END_DATE.equals(obs.getFormSubmissionField())) {
+                    eventEndDate = (String) obs.getValue();
+                } else if (org.smartregister.chw.ge.util.DBConstants.KEY.EVENT_TYPE.equals(obs.getFormSubmissionField())) {
+                    eventType = (String) obs.getValue();
+                } else if (org.smartregister.chw.ge.util.DBConstants.KEY.EVENT_SUPPORTER.equals(obs.getFormSubmissionField())) {
+                    eventSupporter = (String) obs.getValue();
+                }
+            }
+            GeDao.GeMobilization geMobilization = new GeDao.GeMobilization();
+            geMobilization.setBaseEntityID(event.getBaseEntityId());
+            geMobilization.setMobilizationEventType(eventType);
+            geMobilization.setEventStartDate(eventStartDate);
+            geMobilization.setEventEndDate(eventEndDate);
+            geMobilization.setEventSupporter(eventSupporter);
+            geMobilization.setLastInteractedWith(event.getVersion());
+
+            GeDao.updateGeMobilization(geMobilization);
         }
     }
 

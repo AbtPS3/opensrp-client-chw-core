@@ -27,7 +27,7 @@ public class CoreGeRegisterActivity extends BaseGeRegisterActivity {
         super.onResumption();
         NavigationMenu menu = NavigationMenu.getInstance(this, null, null);
         if (menu != null) {
-            menu.getNavigationAdapter().setSelectedView(CoreConstants.DrawerMenu.OVC);
+            menu.getNavigationAdapter().setSelectedView(CoreConstants.DrawerMenu.GE);
         }
     }
 
