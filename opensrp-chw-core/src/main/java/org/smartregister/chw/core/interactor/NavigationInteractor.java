@@ -585,7 +585,7 @@ public class NavigationInteractor implements NavigationContract.Interactor {
                 String sqlGe =
                         "SELECT count(*) " +
                                 "   from " + org.smartregister.chw.ge.util.Constants.TABLES.GE_REGISTER + " p " +
-                                "              where p.is_closed is 0 ";
+                                "              where p.is_closed is 0 AND consent_given = 'yes' ";
                 return NavigationDao.getQueryCount(sqlGe);
             default:
                 return NavigationDao.getTableCount(tableName);

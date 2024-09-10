@@ -610,6 +610,11 @@ public class CoreClientProcessor extends ClientProcessorForJava {
         String eventType = null;
         String eventSupporter = null;
 
+        String numberOfMaleMembersLoan = null;
+        String numberOfFemaleMembersLoan = null;
+        String totalNumberOfMaleCitizensReachedByTheCampaign = null;
+        String totalNumberOfFemaleCitizensReachedByTheCampaign = null;
+
 
         if (!mobilizationObs.isEmpty()) {
             for (Obs obs : mobilizationObs) {
@@ -621,6 +626,14 @@ public class CoreClientProcessor extends ClientProcessorForJava {
                     eventType = (String) obs.getValue();
                 } else if (org.smartregister.chw.ge.util.DBConstants.KEY.EVENT_SUPPORTER.equals(obs.getFormSubmissionField())) {
                     eventSupporter = (String) obs.getValue();
+                } else if (org.smartregister.chw.ge.util.DBConstants.KEY.NUMBER_OF_MALE_MEMBERS_WHO_RECEIVED_LOANS.equals(obs.getFormSubmissionField())) {
+                    numberOfMaleMembersLoan = (String) obs.getValue();
+                } else if (org.smartregister.chw.ge.util.DBConstants.KEY.NUMBER_OF_FEMALE_MEMBERS_WHO_RECEIVED_LOANS.equals(obs.getFormSubmissionField())) {
+                    numberOfFemaleMembersLoan = (String) obs.getValue();
+                } else if (org.smartregister.chw.ge.util.DBConstants.KEY.TOTAL_NUMBER_OF_MALE_CITIZENS_REACHED_BY_THE_CAMPAIGN.equals(obs.getFormSubmissionField())) {
+                    totalNumberOfMaleCitizensReachedByTheCampaign = (String) obs.getValue();
+                } else if (org.smartregister.chw.ge.util.DBConstants.KEY.TOTAL_NUMBER_OF_FEMALE_CITIZENS_REACHED_BY_THE_CAMPAIGN.equals(obs.getFormSubmissionField())) {
+                    totalNumberOfFemaleCitizensReachedByTheCampaign = (String) obs.getValue();
                 }
             }
             GeDao.GeMobilization geMobilization = new GeDao.GeMobilization();
@@ -629,6 +642,12 @@ public class CoreClientProcessor extends ClientProcessorForJava {
             geMobilization.setEventStartDate(eventStartDate);
             geMobilization.setEventEndDate(eventEndDate);
             geMobilization.setEventSupporter(eventSupporter);
+
+            geMobilization.setNumberOfMaleMembersLoan(numberOfMaleMembersLoan);
+            geMobilization.setNumberOfFemaleMembersLoan(numberOfFemaleMembersLoan);
+            geMobilization.setTotalNumberOfMaleCitizensReachedByTheCampaign(totalNumberOfMaleCitizensReachedByTheCampaign);
+            geMobilization.setTotalNumberOfFemaleCitizensReachedByTheCampaign(totalNumberOfFemaleCitizensReachedByTheCampaign);
+
             geMobilization.setLastInteractedWith(event.getVersion());
 
             GeDao.updateGeMobilization(geMobilization);
