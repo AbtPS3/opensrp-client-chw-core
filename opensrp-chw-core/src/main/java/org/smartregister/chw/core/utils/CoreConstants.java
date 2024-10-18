@@ -890,6 +890,7 @@ public class CoreConstants {
         public static final String HEI = "ec_hei";
         public static final String LABOUR_AND_DELIVERY = "ec_ld_confirmation";
         public static final String LTFU_REFERRALS = "ec_ltfu_referrals";
+        public static final String GE_MEMBER = "ec_ge_register";
     }
 
     public static final class INTENT_KEY {
@@ -964,6 +965,7 @@ public class CoreConstants {
         public static final String OVC = "OVC";
 
         public static final String SBC_MONTHLY_SOCIAL_MEDIA_REPORT = "SBC MONTHLY SOCIAL MEDIA REPORT";
+        public static final String GE = "GE";
     }
 
     public static final class RULE_FILE {
@@ -1228,6 +1230,8 @@ public class CoreConstants {
         public static final String GBV_REGISTER_ACTIVITY = "GBV_REGISTER_ACTIVITY";
 
         public static final String OVC_REGISTER_ACTIVITY = "OVC_REGISTER_ACTIVITY";
+
+        public static final String GE_REGISTERER_ACTIVITY = "GE_REGISTERER_ACTIVITY";
     }
 
     public static final class BUSINESS_STATUS {
@@ -1286,6 +1290,8 @@ public class CoreConstants {
         public static final String GBV = "GBV/VAC";
 
         public static final String OVC = "MVC";
+
+        public static final String GE = "GE";
 
     }
 

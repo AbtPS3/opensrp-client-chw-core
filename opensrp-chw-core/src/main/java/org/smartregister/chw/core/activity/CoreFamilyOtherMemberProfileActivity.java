@@ -207,8 +207,10 @@ public abstract class CoreFamilyOtherMemberProfileActivity extends BaseFamilyOth
             startPrEPRegistration();
         } else if (i == R.id.action_sbc_registration) {
             startSbcRegistration();
-        }else if (i == R.id.action_gbv_registration) {
+        } else if (i == R.id.action_gbv_registration) {
             startGbvRegistration();
+        } else if (i == R.id.action_ge_enrollment) {
+            startGeEnrollment();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -258,6 +260,8 @@ public abstract class CoreFamilyOtherMemberProfileActivity extends BaseFamilyOth
     protected abstract void startSbcRegistration();
 
     protected abstract void startGbvRegistration();
+
+    protected abstract void startGeEnrollment();
 
     protected abstract void setIndependentClient(boolean isIndependent);
 
